@@ -7,22 +7,23 @@
 }
 
 body {
-    line-height: 1.6;
+    line-height: 1.7;
     color: #333;
+    font-size: 18px; /* 关键：放大全局正文字号（原默认约16px） */
 }
 
 /* 顶部导航栏（红框1） */
 .top-nav {
     display: flex;
     border-bottom: 1px solid #eee;
-    padding: 10px 20px;
+    padding: 12px 20px; /* 上下内边距微调，适配大字号 */
 }
 
 .top-nav a {
     text-decoration: none;
     color: #333;
     padding: 10px 15px;
-    font-size: 18px;
+    font-size: 20px; /* 关键：放大导航字号（原18px） */
 }
 
 .top-nav a.nav-active {
