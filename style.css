@@ -16,7 +16,7 @@ body {
 .top-nav {
     display: flex;
     border-bottom: 1px solid #eee;
-    padding: 12px 40px; /* 左右留白加大 */
+    padding: 12px 40px; /* 导航栏左右留白 */
 }
 
 .top-nav a {
@@ -31,12 +31,12 @@ body {
     color: #000;
 }
 
-/* 页面容器：居中并设置左右留白 */
+/* 页面容器：居中+左右留白 */
 .container {
     display: flex;
-    padding: 20px 40px; /* 左右内边距，形成页面留白 */
-    max-width: 1400px; /* 内容最大宽度，控制留白比例 */
-    margin: 0 auto; /* 页面居中 */
+    padding: 20px 40px; /* 页面内部左右内边距 */
+    max-width: 1200px; /* 内容最大宽度，超过后两侧自动留白 */
+    margin: 0 auto; /* 页面水平居中 */
 }
 
 /* 左侧栏：信息卡片区域 */
@@ -91,7 +91,7 @@ body {
     text-decoration: none;
 }
 
-/* 标题样式（如Recent News） */
+/* 标题样式（如Publications、Awards） */
 .right-column h2 {
     font-size: 24px; /* 右侧标题字体大小 */
     margin: 30px 0 18px;
