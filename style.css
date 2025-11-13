@@ -12,7 +12,7 @@ body {
     font-size: 20px; /* 关键：放大全局正文字号（原默认约16px） */
 }
 
-/* 顶部导航栏（红框1） */
+/* 顶部导航栏 */
 .top-nav {
     display: flex;
     border-bottom: 1px solid #eee;
@@ -39,7 +39,7 @@ body {
     margin: 0 auto; /* 让容器在页面中居中 */
 }
 
-/* 左侧栏：头像（红框2） + 信息卡片（红框4） */
+/* 左侧栏：头像 + 信息卡片 */
 .left-column {
     width: 250px;
     margin-right: 30px;
@@ -76,7 +76,7 @@ body {
     color: #555;
 }
 
-/* 右侧栏：主介绍（红框3） + 教育经历 */
+/* 右侧栏：主介绍 */
 .right-column {
     flex: 1;
 }
@@ -93,24 +93,4 @@ body {
 .intro a {
     color: #007bff;
     text-decoration: none;
-}
-
-.education h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #eee;
-}
-
-.education ul {
-    list-style-type: none;
-}
-
-.education ul li {
-    margin-bottom: 15px;
-}
-
-.education ul li ul {
-    margin-left: 20px;
-    list-style-type: disc;
 }
