@@ -9,7 +9,7 @@
 body {
     line-height: 1.7;
     color: #333;
-    font-size: 20px; /* 关键：放大全局正文字号（原默认约16px） */
+    font-size: 18px; /* 关键：放大全局正文字号（原默认约16px） */
 }
 
 /* 顶部导航栏 */
@@ -35,8 +35,10 @@ body {
 .container {
     display: flex;
     padding: 20px;
-    max-width: 1000px; /* 限制内容最大宽度，两侧自然出现留白 */
-    margin: 0 auto; /* 让容器在页面中居中 */
+    /* 移除以下两行居中代码 */
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+    width: 100%; /* 可选：确保容器占满宽度 */
 }
 
 /* 左侧栏：头像 + 信息卡片 */
@@ -87,7 +89,7 @@ body {
 
 .intro p {
     margin-bottom: 15px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .intro a {
