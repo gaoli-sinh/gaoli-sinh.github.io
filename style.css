@@ -1,31 +1,29 @@
-/* 全局样式：强制重置，避免浏览器默认样式干扰 */
+/* 全局样式重置与基础设置 */
 * {
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-    font-family: Arial, sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
     line-height: 1.7;
     color: #333;
     background-color: #fff;
-    /* 关键：直接控制页面整体留白！左侧20px（最小），右侧60px（强制留白） */
-    padding: 0 60px 0 20px !important;
 }
 
-/* 顶部导航栏：和左侧卡片对齐，不跑偏 */
+/* 顶部导航栏：和左侧卡片对齐，左侧不留多余空白 */
 .top-nav {
     display: flex;
     border-bottom: 1px solid #eee;
-    padding: 12px 0 !important; /* 取消左右内边距，跟着body留白走 */
+    padding: 12px 20px; /* 左侧内边距20px，和容器左侧对齐 */
 }
 
 .top-nav a {
     text-decoration: none;
     color: #333;
-    padding: 10px 15px !important;
-    font-size: 20px;
+    padding: 10px 15px;
+    font-size: 20px; /* 导航栏字体大小 */
 }
 
 .top-nav a:first-child {
@@ -33,58 +31,59 @@ body {
     color: #000;
 }
 
-/* 页面容器：强制左右分栏，不居中不绕弯 */
+/* 页面容器：左侧顶边，右侧强制留白 */
 .container {
     display: flex;
-    padding: 20px 0 !important; /* 取消容器自带内边距，避免抵消body留白 */
-    width: 100% !important;
+    padding: 20px 40px 20px 20px; /* 左侧20px（最小），右侧40px（强制留白） */
+    max-width: 1200px; /* 关键！缩小最大宽度，让宽屏必出留白 */
+    margin: 0 auto; /* 页面居中 */
 }
 
-/* 左侧栏：顶到最左，宽度固定 */
+/* 左侧栏：顶到左侧，间距协调 */
 .left-column {
-    width: 260px !important;
-    margin-right: 50px !important; /* 左右栏间距，不挤 */
+    width: 260px; /* 微调宽度，更紧凑 */
+    margin-right: 50px; /* 左右栏间距，避免拥挤 */
 }
 
 .avatar img {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 50%; /* 圆形头像 */
     border: 5px solid #f0f0f0;
 }
 
 .info-card {
-    margin-top: 20px !important;
-    padding: 20px !important;
+    margin-top: 20px;
+    padding: 20px;
     background-color: #f9f9f9;
     border-radius: 5px;
 }
 
 .info-card h2 {
-    font-size: 24px;
-    margin-bottom: 12px !important;
+    font-size: 24px; /* 姓名标题字体大小 */
+    margin-bottom: 12px;
 }
 
 .info-card p {
-    margin-bottom: 10px !important;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
-    font-size: 16px; /* 左侧小字体 */
+    font-size: 16px; /* 左侧信息文字大小（比右侧小） */
 }
 
 .info-card i {
-    margin-right: 8px !important;
+    margin-right: 8px;
     color: #555;
 }
 
-/* 右侧栏：主内容，右侧留白靠body控制 */
+/* 右侧栏：主内容区域，右侧留白明显 */
 .right-column {
     flex: 1;
 }
 
 .intro p {
-    margin-bottom: 18px !important;
-    font-size: 19px; /* 右侧大字体 */
+    margin-bottom: 18px;
+    font-size: 19px; /* 右侧正文文字大小（比左侧大） */
 }
 
 .intro a {
@@ -92,23 +91,25 @@ body {
     text-decoration: none;
 }
 
+/* 标题样式（如Publications、Awards） */
 .right-column h2 {
-    font-size: 24px;
-    margin: 30px 0 18px !important;
-    padding-bottom: 8px !important;
+    font-size: 24px; /* 右侧标题字体大小 */
+    margin: 30px 0 18px;
+    padding-bottom: 8px;
     border-bottom: 1px solid #eee;
 }
 
+/* 列表样式 */
 .right-column ul {
     list-style-type: none;
 }
 
 .right-column ul li {
-    margin-bottom: 15px !important;
-    font-size: 19px;
+    margin-bottom: 15px;
+    font-size: 19px; /* 右侧列表文字大小 */
 }
 
 .right-column ul li ul {
-    margin-left: 25px !important;
+    margin-left: 25px;
     list-style-type: disc;
 }
