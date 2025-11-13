@@ -12,11 +12,11 @@ body {
     background-color: #fff;
 }
 
-/* 顶部导航栏 */
+/* 顶部导航栏：和左侧卡片对齐，左侧不留多余空白 */
 .top-nav {
     display: flex;
     border-bottom: 1px solid #eee;
-    padding: 12px 40px; /* 导航栏左右留白 */
+    padding: 12px 20px; /* 左侧内边距20px，和容器左侧对齐 */
 }
 
 .top-nav a {
@@ -31,18 +31,18 @@ body {
     color: #000;
 }
 
-/* 页面容器：居中+左右大留白 */
+/* 页面容器：左侧顶边，右侧强制留白 */
 .container {
     display: flex;
-    padding: 20px 60px 20px 20px; /* 左侧内边距20px，右侧保持60px留白 */
-    max-width: 1400px;
-    margin: 0 auto;
+    padding: 20px 40px 20px 20px; /* 左侧20px（最小），右侧40px（强制留白） */
+    max-width: 1200px; /* 关键！缩小最大宽度，让宽屏必出留白 */
+    margin: 0 auto; /* 页面居中 */
 }
 
-/* 左侧栏：信息卡片区域 */
+/* 左侧栏：顶到左侧，间距协调 */
 .left-column {
-    width: 280px;
-    margin-right: 40px; /* 微调右侧间距 */
+    width: 260px; /* 微调宽度，更紧凑 */
+    margin-right: 50px; /* 左右栏间距，避免拥挤 */
 }
 
 .avatar img {
@@ -68,7 +68,7 @@ body {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    font-size: 16px; /* 左侧信息文字大小 */
+    font-size: 16px; /* 左侧信息文字大小（比右侧小） */
 }
 
 .info-card i {
@@ -76,14 +76,14 @@ body {
     color: #555;
 }
 
-/* 右侧栏：主内容区域 */
+/* 右侧栏：主内容区域，右侧留白明显 */
 .right-column {
     flex: 1;
 }
 
 .intro p {
     margin-bottom: 18px;
-    font-size: 18px; /* 右侧正文文字大小 */
+    font-size: 19px; /* 右侧正文文字大小（比左侧大） */
 }
 
 .intro a {
@@ -106,7 +106,7 @@ body {
 
 .right-column ul li {
     margin-bottom: 15px;
-    font-size: 18px; /* 右侧列表文字大小 */
+    font-size: 19px; /* 右侧列表文字大小 */
 }
 
 .right-column ul li ul {
