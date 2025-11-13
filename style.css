@@ -65,9 +65,10 @@ body {
 }
 
 .info-card p {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
+    font-size: 16px; /* 左侧信息文字缩小 */
 }
 
 .info-card i {
@@ -86,7 +87,7 @@ body {
 
 .intro p {
     margin-bottom: 15px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .intro a {
