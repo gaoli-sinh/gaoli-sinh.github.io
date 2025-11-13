@@ -35,7 +35,7 @@ body {
 .container {
     display: flex;
     padding: 20px 60px; /* 加大左右内边距，强化留白 */
-    max-width: 1600px; /* 内容最大宽度，超过后两侧自动留白 */
+    max-width: 800px; /* 内容最大宽度，超过后两侧自动留白 */
     margin: 0 auto; /* 页面水平居中 */
 }
 
