@@ -34,6 +34,8 @@ body {
 .container {
     display: flex;
     padding: 20px;
+    max-width: 1200px; /* 限制内容最大宽度，两侧自然出现留白 */
+    margin: 0 auto; /* 让容器在页面中居中 */
 }
 
 /* 左侧栏：头像（红框2） + 信息卡片（红框4） */
