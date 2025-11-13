@@ -1,4 +1,4 @@
-/* 全局样式重置 */
+/* 全局样式重置与基础设置 */
 * {
     margin: 0;
     padding: 0;
@@ -9,68 +9,66 @@
 body {
     line-height: 1.7;
     color: #333;
-    font-size: 18px; /* 关键：放大全局正文字号（原默认约16px） */
+    background-color: #fff;
 }
 
 /* 顶部导航栏 */
 .top-nav {
     display: flex;
     border-bottom: 1px solid #eee;
-    padding: 12px 20px; /* 上下内边距微调，适配大字号 */
+    padding: 12px 40px; /* 左右留白加大 */
 }
 
 .top-nav a {
     text-decoration: none;
     color: #333;
     padding: 10px 15px;
-    font-size: 20px; /* 关键：放大导航字号（原18px） */
+    font-size: 20px; /* 导航栏字体大小 */
 }
 
-.top-nav a.nav-active {
+.top-nav a:first-child {
     font-weight: bold;
     color: #000;
 }
 
-/* 容器：左右分栏 */
+/* 页面容器：居中并设置左右留白 */
 .container {
     display: flex;
-    padding: 20px;
-    /* 移除以下两行居中代码 */
-    /* max-width: 1200px; */
-    /* margin: 0 auto; */
-    width: 100%; /* 可选：确保容器占满宽度 */
+    padding: 20px 40px; /* 左右内边距，形成页面留白 */
+    max-width: 1400px; /* 内容最大宽度，控制留白比例 */
+    margin: 0 auto; /* 页面居中 */
 }
 
-/* 左侧栏：头像 + 信息卡片 */
+/* 左侧栏：信息卡片区域 */
 .left-column {
-    width: 250px;
-    margin-right: 30px;
+    width: 280px;
+    margin-right: 40px; /* 左右栏间距 */
 }
 
 .avatar img {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%; /* 圆形头像 */
     border: 5px solid #f0f0f0;
 }
 
 .info-card {
     margin-top: 20px;
-    padding: 15px;
+    padding: 20px;
     background-color: #f9f9f9;
     border-radius: 5px;
 }
 
 .info-card h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 24px; /* 姓名标题字体大小 */
+    margin-bottom: 12px;
 }
 
 .info-card p {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    font-size: 16px; /* 左侧信息文字缩小 */
+    font-size: 16px; /* 左侧信息文字大小 */
 }
 
 .info-card i {
@@ -78,21 +76,40 @@ body {
     color: #555;
 }
 
-/* 右侧栏：主介绍 */
+/* 右侧栏：主内容区域 */
 .right-column {
     flex: 1;
 }
 
-.intro {
-    margin-bottom: 30px;
-}
-
 .intro p {
-    margin-bottom: 15px;
-    font-size: 18px;
+    margin-bottom: 18px;
+    font-size: 18px; /* 右侧正文文字大小 */
 }
 
 .intro a {
     color: #007bff;
     text-decoration: none;
+}
+
+/* 标题样式（如Recent News） */
+.right-column h2 {
+    font-size: 24px; /* 右侧标题字体大小 */
+    margin: 30px 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+/* 列表样式 */
+.right-column ul {
+    list-style-type: none;
+}
+
+.right-column ul li {
+    margin-bottom: 15px;
+    font-size: 18px; /* 右侧列表文字大小 */
+}
+
+.right-column ul li ul {
+    margin-left: 25px;
+    list-style-type: disc;
 }
