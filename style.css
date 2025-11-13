@@ -31,18 +31,18 @@ body {
     color: #000;
 }
 
-/* 页面容器：居中+左右留白 */
+/* 页面容器：居中+左右大留白 */
 .container {
     display: flex;
-    padding: 20px 40px; /* 页面内部左右内边距 */
-    max-width: 1000px; /* 内容最大宽度，超过后两侧自动留白 */
+    padding: 20px 60px; /* 加大左右内边距，强化留白 */
+    max-width: 1400px; /* 内容最大宽度，超过后两侧自动留白 */
     margin: 0 auto; /* 页面水平居中 */
 }
 
 /* 左侧栏：信息卡片区域 */
 .left-column {
     width: 280px;
-    margin-right: 40px; /* 左右栏间距 */
+    margin-right: 60px; /* 加大左右栏间距 */
 }
 
 .avatar img {
