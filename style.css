@@ -91,25 +91,60 @@ body {
     text-decoration: none;
 }
 
-/* 标题样式（如Publications、Awards） */
-.right-column h2 {
-    font-size: 24px; /* 右侧标题字体大小 */
-    margin: 30px 0 18px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #eee;
+/* -------------- Publications 板块样式 -------------- */
+.publications h2 {
+  font-size: 28px;
+  margin: 40px 0 20px;
+  color: #333;
 }
 
-/* 列表样式 */
-.right-column ul {
-    list-style-type: none;
+.publications p {
+  margin-bottom: 20px;
+  font-size: 16px;
 }
 
-.right-column ul li {
-    margin-bottom: 15px;
-    font-size: 19px; /* 右侧列表文字大小 */
+.publications h3 {
+  font-size: 24px;
+  margin: 30px 0 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
 }
 
-.right-column ul li ul {
-    margin-left: 25px;
-    list-style-type: disc;
+.publication-list {
+  list-style: none; /* 清除默认列表样式 */
+}
+
+.publication-list li {
+  position: relative;
+  padding-left: 20px; /* 给蓝色竖线留空间 */
+  margin-bottom: 30px; /* 论文之间的间距 */
+}
+
+/* 左侧蓝色竖线（核心样式） */
+.publication-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #4285f4; /* 蓝色竖线颜色，可根据喜好调整 */
+}
+
+.paper-title {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.paper-authors {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.paper-venue {
+  font-style: italic;
+  font-size: 16px;
+  color: #666; /* 期刊颜色浅灰色，突出层级 */
 }
