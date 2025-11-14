@@ -140,11 +140,12 @@ body {
 
 .paper-authors {
   font-size: 16px;
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
 
 .paper-venue {
   font-style: italic;
   font-size: 16px;
+  margin-top: 0; /* 期刊段落顶部边距设为0 */
   color: #666; /* 期刊颜色浅灰色，突出层级 */
 }
