@@ -34,20 +34,20 @@ body {
 /* 页面容器：左侧顶边，右侧强制留白 */
 .container {
     display: flex;
-    padding: 20px 40px 20px 5px; /* 左侧20px（最小），右侧40px（强制留白） */
-    max-width: 1200px; /* 关键！缩小最大宽度，让宽屏必出留白 */
+    padding: 20px 40px 20px 5px; /* 左侧5px最小留白，右侧40px强制留白 */
+    max-width: 1200px; /* 宽屏时右侧自动留白 */
     margin: 0 auto; /* 页面居中 */
 }
 
 /* 左侧栏：顶到左侧，间距协调 */
 .left-column {
-    width: 260px; /* 微调宽度，更紧凑 */
-    margin-right: 50px; /* 左右栏间距，避免拥挤 */
+    width: 260px; /* 左侧栏固定宽度 */
+    margin-right: 50px; /* 左右栏间距 */
 }
 
 .avatar img {
     width: 200px;
-    height: 250px;
+    height: 250px; /* 按你的设置保留，若想圆形不变形可改为200px */
     border-radius: 50%; /* 圆形头像 */
     border: 5px solid #f0f0f0;
 }
@@ -82,8 +82,8 @@ body {
 }
 
 .intro p {
-    margin-bottom: 18px;
-    font-size: 19px; /* 右侧正文文字大小（比左侧大） */
+    margin-bottom: 12px; /* 个人介绍底部间距从18px→12px（缩小与Publications的空白） */
+    font-size: 19px; /* 右侧正文文字大小 */
 }
 
 .intro a {
@@ -91,62 +91,55 @@ body {
     text-decoration: none;
 }
 
-/* -------------- Publications 板块样式 -------------- */
+/* -------------- Publications 板块样式（空白最小化） -------------- */
 .publications h2 {
-  font-size: 28px;
-  margin: 40px 0 20px;
-  color: #333;
+    font-size: 26px; /* 标题字体从28px→26px（更协调，不突兀） */
+    margin: 20px 0 6px; /* 顶部间距20px（介绍与标题间距），底部6px（标题与说明文字间距） */
+    color: #333;
 }
 
 .publications p {
-  margin-top: 0; /* 说明文字顶部边距设为0，消除多余空白 */
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-
-.publications h3 {
-  font-size: 24px;
-  margin: 30px 0 20px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 10px; /* 说明文字底部间距从12px→10px（缩小与论文列表的空白） */
+    font-size: 16px;
 }
 
 .publication-list {
-  list-style: none; /* 清除默认列表样式 */
+    list-style: none; /* 清除默认列表样式 */
 }
 
 .publication-list li {
-  position: relative;
-  padding-left: 20px; /* 给蓝色竖线留空间 */
-  margin-bottom: 30px; /* 论文之间的间距 */
+    position: relative;
+    padding-left: 20px; /* 给蓝色竖线留空间 */
+    margin-bottom: 18px; /* 论文之间间距从20px→18px（最小化） */
 }
 
 /* 左侧蓝色竖线（核心样式） */
 .publication-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background-color: #4285f4; /* 蓝色竖线颜色，可根据喜好调整 */
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #4285f4; /* 蓝色竖线颜色 */
 }
 
 .paper-title {
-  font-weight: bold;
-  font-size: 18px;
-  display: block;
-  margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 3px; /* 论文标题与作者间距最小化 */
 }
 
 .paper-authors {
-  font-size: 16px;
-  margin-bottom: 0;
+    font-size: 16px;
+    margin-bottom: 0; /* 作者与期刊无间距 */
 }
 
 .paper-venue {
-  font-style: italic;
-  font-size: 16px;
-  margin-top: 0; /* 期刊段落顶部边距设为0 */
-  color: #666; /* 期刊颜色浅灰色，突出层级 */
+    font-style: italic;
+    font-size: 16px;
+    margin-top: 0; /* 期刊与作者无间距 */
+    color: #666; /* 期刊浅灰色，突出层级 */
 }
