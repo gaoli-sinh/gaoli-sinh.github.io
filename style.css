@@ -94,7 +94,7 @@ body {
 /* -------------- Publications 板块样式（空白最小化） -------------- */
 .publications h2 {
     font-size: 26px; /* 标题字体从28px→26px（更协调，不突兀） */
-    margin: 20px 0 6px; /* 顶部间距20px（介绍与标题间距），底部6px（标题与说明文字间距） */
+    margin: 20px 0 3px; /* 顶部间距20px（介绍与标题间距），底部6px（标题与说明文字间距） */
     color: #333;
 }
 
@@ -111,7 +111,7 @@ body {
 .publication-list li {
     position: relative;
     padding-left: 20px; /* 给蓝色竖线留空间 */
-    margin-bottom: 18px; /* 论文之间间距从20px→18px（最小化） */
+    margin-bottom: 16px; /* 论文之间间距从20px→18px（最小化） */
 }
 
 /* 左侧蓝色竖线（核心样式） */
