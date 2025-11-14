@@ -47,7 +47,7 @@ body {
 
 .avatar img {
     width: 200px;
-    height: 200px;
+    height: 250px;
     border-radius: 50%; /* 圆形头像 */
     border: 5px solid #f0f0f0;
 }
