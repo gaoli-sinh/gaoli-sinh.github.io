@@ -34,7 +34,7 @@ body {
 /* 页面容器：左侧顶边，右侧强制留白 */
 .container {
     display: flex;
-    padding: 20px 40px 20px 20px; /* 左侧20px（最小），右侧40px（强制留白） */
+    padding: 20px 40px 20px 10px; /* 左侧20px（最小），右侧40px（强制留白） */
     max-width: 1200px; /* 关键！缩小最大宽度，让宽屏必出留白 */
     margin: 0 auto; /* 页面居中 */
 }
