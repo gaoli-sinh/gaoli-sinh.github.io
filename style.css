@@ -99,6 +99,7 @@ body {
 }
 
 .publications p {
+  margin-top: 0; /* 说明文字顶部边距设为0，消除多余空白 */
   margin-bottom: 20px;
   font-size: 16px;
 }
