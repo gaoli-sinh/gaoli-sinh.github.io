@@ -39,10 +39,13 @@ body {
     margin: 0 auto; /* 页面居中 */
 }
 
-/* 左侧栏：顶到左侧，间距协调 */
+/* 左侧栏：设置固定定位，滚动时保持可见 */
 .left-column {
-    width: 260px; /* 左侧栏固定宽度 */
-    margin-right: 50px; /* 左右栏间距 */
+    width: 260px;
+    position: fixed; /* 核心：固定定位，脱离文档流，不随滚动移动 */
+    top: 80px; /* 距离顶部的距离（可根据导航栏高度微调，确保不遮挡） */
+    left: 20px; /* 距离左侧的距离，与页面整体留白协调 */
+    margin-right: 50px;
 }
 
 .avatar img {
@@ -76,9 +79,10 @@ body {
     color: #555;
 }
 
-/* 右侧栏：主内容区域，右侧留白明显 */
+/* 右侧栏：调整左边距，避免与左侧固定栏重叠 */
 .right-column {
     flex: 1;
+    margin-left: 330px; /* 左侧栏宽度260px + 间距50px + 缓冲20px，确保不重叠 */
 }
 
 .intro p {
