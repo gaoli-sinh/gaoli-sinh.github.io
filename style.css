@@ -132,7 +132,7 @@ body {
     top: 0;
     bottom: 0;
     width: 4px;
-    background-color: #4285f4; /* 蓝色竖线颜色 */
+    background-color: #999; /* 灰色，可根据喜好调整深浅，如#aaa、#888等 */
 }
 
 .paper-title {
