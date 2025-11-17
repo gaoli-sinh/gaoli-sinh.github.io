@@ -91,6 +91,12 @@ body {
     margin-left: 330px; /* 左侧栏宽度260px + 间距50px + 缓冲20px，确保不重叠 */
 }
 
+/* 右侧内容区域的段落两端对齐 */
+.right-column p {
+    text-align: justify;
+    text-justify: inter-word; /* 优化单词间的间距，提升可读性 */
+}
+
 .intro p {
     margin-bottom: 12px; /* 个人介绍底部间距从18px→12px（缩小与Publications的空白） */
     font-size: 19px; /* 右侧正文文字大小 */
