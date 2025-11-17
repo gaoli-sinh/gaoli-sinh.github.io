@@ -62,6 +62,12 @@ body {
     border-radius: 5px;
 }
 
+/* 左侧信息卡片内的链接样式：黑色、无下划线 */
+.info-card a {
+    color: #333; /* 与正文一致的深灰色/黑色 */
+    text-decoration: none; /* 去掉默认的蓝色下划线 */
+}
+
 .info-card h2 {
     font-size: 24px; /* 姓名标题字体大小 */
     margin-bottom: 12px;
