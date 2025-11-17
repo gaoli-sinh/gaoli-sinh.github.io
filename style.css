@@ -159,3 +159,20 @@ body {
     margin-top: 0; /* 期刊与作者无间距 */
     color: #666; /* 期刊浅灰色，突出层级 */
 }
+
+/* 页面底部样式 */
+footer {
+  margin-top: 40px; /* 与上方内容保持间距 */
+  padding: 20px 0;
+}
+
+.footer-line {
+  border-top: 1px solid #eee; /* 横线样式，颜色与页面分隔线一致 */
+  margin-bottom: 10px;
+}
+
+footer p {
+  text-align: right; /* 文字右对齐 */
+  font-size: 14px;
+  color: #666; /* 浅灰色，与页面次要文字风格一致 */
+}
