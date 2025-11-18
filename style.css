@@ -6,6 +6,13 @@
     font-family: Arial, sans-serif;
 }
 
+/* 导航栏对齐容器：与主体容器样式一致 */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
 body {
     line-height: 1.7;
     color: #333;
@@ -13,10 +20,11 @@ body {
 }
 
 /* 顶部导航栏：和容器对齐，居中协调 */
+/* 调整导航栏内边距，使其在容器内居中 */
 .top-nav {
-    display: flex;
-    border-bottom: 1px solid #eee;
-    padding: 12px 40px; /* 与容器左右内边距一致，保持对齐 */
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0; /* 去掉原左侧padding，由外层容器控制 */
 }
 
 .top-nav a {
