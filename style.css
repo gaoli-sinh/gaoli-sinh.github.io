@@ -12,11 +12,11 @@ body {
     background-color: #fff;
 }
 
-/* 顶部导航栏：和左侧卡片对齐，左侧不留多余空白 */
+/* 顶部导航栏：和容器对齐，居中协调 */
 .top-nav {
     display: flex;
     border-bottom: 1px solid #eee;
-    padding: 12px 20px; /* 左侧内边距20px，和容器左侧对齐 */
+    padding: 12px 40px; /* 与容器左右内边距一致，保持对齐 */
 }
 
 .top-nav a {
@@ -31,26 +31,27 @@ body {
     color: #000;
 }
 
-/* 页面容器：左侧顶边，右侧强制留白 */
+/* 页面容器：居中核心样式，限制最大宽度+水平居中 */
 .container {
     display: flex;
-    padding: 20px 40px 20px 5px; /* 左侧5px最小留白，右侧40px强制留白 */
-    max-width: 1200px; /* 宽屏时右侧自动留白 */
-    margin: 0 auto; /* 页面居中 */
+    max-width: 1200px; /* 宽屏时最大宽度，避免内容过宽 */
+    margin: 0 auto; /* 页面水平居中 */
+    padding: 20px 40px; /* 左右内边距，避免内容贴边 */
 }
 
-/* 左侧栏：设置固定定位，滚动时保持可见 */
+/* 左侧栏：固定定位+居中稍左偏移，滚动时保持可见 */
 .left-column {
     width: 260px;
-    position: fixed; /* 核心：固定定位，脱离文档流，不随滚动移动 */
-    top: 80px; /* 距离顶部的距离（可根据导航栏高度微调，确保不遮挡） */
-    left: 20px; /* 距离左侧的距离，与页面整体留白协调 */
+    position: fixed; /* 固定定位，不随滚动移动 */
+    top: 80px; /* 距离顶部的距离（适配导航栏高度） */
+    /* 居中稍左核心：容器居中后，向左偏移20px，视觉更协调 */
+    left: calc((100% - 1200px)/2 + 20px);
     margin-right: 50px;
 }
 
 .avatar img {
     width: 200px;
-    height: 250px; /* 按你的设置保留，若想圆形不变形可改为200px */
+    height: 250px; /* 按原有设置保留，如需圆形不变形可改为200px */
     border-radius: 50%; /* 圆形头像 */
     border: 5px solid #f0f0f0;
 }
@@ -126,11 +127,11 @@ body {
 
 .publication-list li {
     position: relative;
-    padding-left: 20px; /* 给蓝色竖线留空间 */
+    padding-left: 20px; /* 给灰色竖线留空间 */
     margin-bottom: 16px; /* 论文之间间距从20px→18px（最小化） */
 }
 
-/* 左侧蓝色竖线（核心样式） */
+/* 左侧灰色竖线（核心样式） */
 .publication-list li::before {
     content: "";
     position: absolute;
@@ -138,7 +139,7 @@ body {
     top: 0;
     bottom: 0;
     width: 4px;
-    background-color: #999; /* 灰色，可根据喜好调整深浅，如#aaa、#888等 */
+    background-color: #999; /* 灰色，可根据喜好调整深浅 */
 }
 
 .paper-title {
@@ -162,18 +163,53 @@ body {
 
 /* 页面底部样式 */
 footer {
-  margin-top: 40px; /* 与上方内容保持间距 */
-  padding: 20px 0;
+    margin-top: 40px; /* 与上方内容保持间距 */
+    padding: 20px 0;
 }
 
 .footer-line {
-  border-top: 1px solid #eee; /* 横线样式，颜色与页面分隔线一致 */
-  margin-bottom: 10px;
+    border-top: 1px solid #eee; /* 横线样式，颜色与页面分隔线一致 */
+    margin-bottom: 10px;
 }
 
 footer p {
-  text-align: right; /* 文字右对齐 */
-  font-size: 14px;
-  color: #666; /* 浅灰色，与页面次要文字风格一致 */
-  margin-right: 20px; /* 新增属性，控制右间距实现左移 */
+    text-align: right; /* 文字右对齐 */
+    font-size: 14px;
+    color: #666; /* 浅灰色，与页面次要文字风格一致 */
+    margin-right: 20px; /* 控制右间距实现左移 */
+}
+
+/* 响应式适配：小屏幕（手机/平板）布局优化 */
+@media (max-width: 1200px) {
+    .container {
+        padding: 20px 20px; /* 小屏幕缩小左右内边距 */
+    }
+    .top-nav {
+        padding: 12px 20px; /* 导航栏与容器内边距一致 */
+    }
+    .left-column {
+        left: 20px; /* 小屏幕时左对齐，避免布局错乱 */
+    }
+}
+
+/* 额外适配超小屏幕（手机竖屏）：避免左侧栏遮挡 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* 上下排列 */
+        padding: 20px 15px;
+    }
+    .left-column {
+        position: static; /* 取消固定定位 */
+        width: 100%;
+        top: auto;
+        left: auto;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 左侧内容居中 */
+    }
+    .right-column {
+        margin-left: 0;
+        margin-top: 20px;
+    }
 }
