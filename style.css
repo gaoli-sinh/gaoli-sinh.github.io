@@ -175,4 +175,5 @@ footer p {
   text-align: right; /* 文字右对齐 */
   font-size: 14px;
   color: #666; /* 浅灰色，与页面次要文字风格一致 */
+  margin-right: 20px; /* 新增属性，控制右间距实现左移 */
 }
