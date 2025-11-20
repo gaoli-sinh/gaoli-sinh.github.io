@@ -221,3 +221,24 @@ footer p {
         margin-top: 20px;
     }
 }
+
+/* 专业服务板块样式 */
+.professional-services {
+  margin-top: 40px; /* 与上方内容保持间距 */
+}
+
+.professional-services h2 {
+  font-size: 26px; /* 与 Publications 标题字号一致 */
+  margin: 20px 0 10px; /* 标题上下间距 */
+  color: #333;
+}
+
+.professional-services ul {
+  list-style: disc; /* 项目符号样式，与现有列表一致 */
+  margin-left: 20px;
+}
+
+.professional-services li {
+  margin-bottom: 8px; /* 列表项间距 */
+  font-size: 18px; /* 与正文文字大小一致 */
+}
