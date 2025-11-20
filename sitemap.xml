@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gaoli-sinh.github.io/</loc> <!-- 你的主页地址 -->
-    <lastmod>2025-11-19</lastmod>         <!-- 最后修改时间，需同步更新 -->
+    <lastmod>2025-11-20</lastmod>         <!-- 最后修改时间，需同步更新 -->
     <changefreq>daily</changefreq>       <!-- 页面更新频率（如每天更新） -->
     <priority>0.8</priority>              <!-- 页面优先级（0-1，越高越优先） -->
   </url>
