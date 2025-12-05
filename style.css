@@ -45,16 +45,13 @@ body {
     max-width: 1200px; /* 宽屏时最大宽度，避免内容过宽 */
     margin: 0 auto; /* 页面水平居中 */
     padding: 20px 40px; /* 左右内边距，避免内容贴边 */
+    gap: 50px; /* 左右栏间距（替代原右侧栏margin-left，更灵活） */
 }
 
-/* 左侧栏：固定定位+居中稍左偏移，滚动时保持可见 */
+/* 左侧栏：取消固定定位，随页面滚动（核心修改） */
 .left-column {
     width: 260px;
-    /* position: fixed; */ /* 固定定位，不随滚动移动 */
-    top: 80px; /* 距离顶部的距离（适配导航栏高度） */
-    /* 居中稍左核心：容器居中后，向左偏移20px，视觉更协调 */
-    left: calc((100% - 1200px)/2 + 20px);
-    margin-right: 50px;
+    margin-right: 0; /* 间距由container的gap控制，此处重置为0 */
 }
 
 .avatar img {
@@ -94,10 +91,10 @@ body {
     color: #555;
 }
 
-/* 右侧栏：调整左边距，避免与左侧固定栏重叠 */
+/* 右侧栏：重置margin-left，由container的gap控制间距 */
 .right-column {
     flex: 1;
-    margin-left: 330px; /* 左侧栏宽度260px + 间距50px + 缓冲20px，确保不重叠 */
+    margin-left: 0; /* 核心修改：删除原330px的偏移，避免布局错位 */
 }
 
 /* 右侧内容区域的段落两端对齐 */
@@ -191,13 +188,15 @@ footer p {
 @media (max-width: 1200px) {
     .container {
         padding: 20px 20px; /* 小屏幕缩小左右内边距 */
+        gap: 30px; /* 小屏幕缩小栏间距 */
+    }
+    .header-container {
+        padding: 0 20px; /* 导航栏容器同步缩间距 */
     }
     .top-nav {
-        padding: 12px 20px; /* 导航栏与容器内边距一致 */
+        padding: 12px 0; /* 导航栏内边距保持不变 */
     }
-    .left-column {
-        left: 20px; /* 小屏幕时左对齐，避免布局错乱 */
-    }
+    /* 移除无效的left属性（原fixed定位的残留） */
 }
 
 /* 额外适配超小屏幕（手机竖屏）：避免左侧栏遮挡 */
@@ -205,12 +204,13 @@ footer p {
     .container {
         flex-direction: column; /* 上下排列 */
         padding: 20px 15px;
+        gap: 20px; /* 竖屏时上下栏间距 */
+    }
+    .header-container {
+        padding: 0 15px;
     }
     .left-column {
-        position: static; /* 取消固定定位 */
         width: 100%;
-        top: auto;
-        left: auto;
         margin-right: 0;
         display: flex;
         flex-direction: column;
@@ -218,7 +218,7 @@ footer p {
     }
     .right-column {
         margin-left: 0;
-        margin-top: 20px;
+        margin-top: 0; /* 由container的gap控制间距，此处重置 */
     }
 }
 
