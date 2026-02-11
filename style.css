@@ -39,6 +39,13 @@ body {
     color: #000;
 }
 
+/* 新增：导航激活态样式（当前页面标记） */
+.top-nav a.nav-active {
+    border-bottom: 2px solid #e53935; /* 红色下划线标识当前页 */
+    color: #000;
+    font-weight: bold;
+}
+
 /* 页面容器：居中核心样式，限制最大宽度+水平居中 */
 .container {
     display: flex;
@@ -120,6 +127,15 @@ body {
     color: #333;
 }
 
+/* 新增：年份分组标题样式 */
+.publications h3 {
+    font-size: 22px;
+    margin: 25px 0 10px;
+    color: #555;
+    border-left: 4px solid #e53935; /* 红色左侧线区分年份 */
+    padding-left: 10px;
+}
+
 .publications p {
     margin-top: 0;
     margin-bottom: 10px; /* 说明文字底部间距从12px→10px（缩小与论文列表的空白） */
@@ -152,6 +168,16 @@ body {
     font-size: 18px;
     display: block;
     margin-bottom: 3px; /* 论文标题与作者间距最小化 */
+}
+
+/* 新增：论文链接hover效果 */
+.paper-title a {
+    color: #007bff;
+    text-decoration: none;
+}
+.paper-title a:hover {
+    text-decoration: underline;
+    color: #0056b3;
 }
 
 .paper-authors {
@@ -220,6 +246,11 @@ footer p {
         margin-left: 0;
         margin-top: 0; /* 由container的gap控制间距，此处重置 */
     }
+    /* 移动端头像适配 */
+    .avatar img {
+        width: 180px; /* 移动端缩小头像 */
+        height: 180px; /* 宽高一致，避免圆形变形 */
+    }
 }
 
 /* 专业服务板块样式 */
@@ -241,4 +272,20 @@ footer p {
 .professional-services li {
   margin-bottom: 8px; /* 列表项间距 */
   font-size: 18px; /* 与正文文字大小一致 */
+}
+
+/* 滚动条优化（新增） */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #777;
 }
