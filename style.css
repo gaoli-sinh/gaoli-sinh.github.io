@@ -20,18 +20,17 @@ body {
 }
 
 /* 顶部导航栏：和容器对齐，居中协调 */
-/* 调整导航栏内边距，使其在容器内居中 */
 .top-nav {
   display: flex;
   border-bottom: 1px solid #eee;
-  padding: 12px 0; /* 去掉原左侧padding，由外层容器控制 */
+  padding: 12px 0;
 }
 
 .top-nav a {
     text-decoration: none;
     color: #333;
     padding: 10px 15px;
-    font-size: 20px; /* 导航栏字体大小 */
+    font-size: 20px;
 }
 
 .top-nav a:first-child {
@@ -39,32 +38,32 @@ body {
     color: #000;
 }
 
-/* 新增：导航激活态样式（当前页面标记） */
+/* 导航激活态样式 */
 .top-nav a.nav-active {
-    border-bottom: 2px solid #e53935; /* 红色下划线标识当前页 */
+    border-bottom: 2px solid #e53935;
     color: #000;
     font-weight: bold;
 }
 
-/* 页面容器：居中核心样式，限制最大宽度+水平居中 */
+/* 页面容器：居中核心样式 */
 .container {
     display: flex;
-    max-width: 1200px; /* 宽屏时最大宽度，避免内容过宽 */
-    margin: 0 auto; /* 页面水平居中 */
-    padding: 20px 40px; /* 左右内边距，避免内容贴边 */
-    gap: 50px; /* 左右栏间距（替代原右侧栏margin-left，更灵活） */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    gap: 50px;
 }
 
-/* 左侧栏：取消固定定位，随页面滚动（核心修改） */
+/* 左侧栏 */
 .left-column {
     width: 260px;
-    margin-right: 0; /* 间距由container的gap控制，此处重置为0 */
+    margin-right: 0;
 }
 
 .avatar img {
     width: 200px;
-    height: 250px; /* 按原有设置保留，如需圆形不变形可改为200px */
-    border-radius: 50%; /* 圆形头像 */
+    height: 250px;
+    border-radius: 50%;
     border: 5px solid #f0f0f0;
 }
 
@@ -75,14 +74,14 @@ body {
     border-radius: 5px;
 }
 
-/* 左侧信息卡片内的链接样式：黑色、无下划线 */
+/* 左侧信息卡片内链接 */
 .info-card a {
-    color: #333; /* 与正文一致的深灰色/黑色 */
-    text-decoration: none; /* 去掉默认的蓝色下划线 */
+    color: #333;
+    text-decoration: none;
 }
 
 .info-card h2 {
-    font-size: 24px; /* 姓名标题字体大小 */
+    font-size: 24px;
     margin-bottom: 12px;
 }
 
@@ -90,7 +89,7 @@ body {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    font-size: 16px; /* 左侧信息文字大小（比右侧小） */
+    font-size: 16px;
 }
 
 .info-card i {
@@ -98,21 +97,21 @@ body {
     color: #555;
 }
 
-/* 右侧栏：重置margin-left，由container的gap控制间距 */
+/* 右侧栏 */
 .right-column {
     flex: 1;
-    margin-left: 0; /* 核心修改：删除原330px的偏移，避免布局错位 */
+    margin-left: 0;
 }
 
-/* 右侧内容区域的段落两端对齐 */
+/* 右侧内容段落两端对齐 */
 .right-column p {
     text-align: justify;
-    text-justify: inter-word; /* 优化单词间的间距，提升可读性 */
+    text-justify: inter-word;
 }
 
 .intro p {
-    margin-bottom: 12px; /* 个人介绍底部间距从18px→12px（缩小与Publications的空白） */
-    font-size: 19px; /* 右侧正文文字大小 */
+    margin-bottom: 12px;
+    font-size: 19px;
 }
 
 .intro a {
@@ -120,39 +119,37 @@ body {
     text-decoration: none;
 }
 
-/* -------------- Publications 板块样式（空白最小化） -------------- */
+/* Publications 板块样式 */
 .publications h2 {
-    font-size: 26px; /* 标题字体从28px→26px（更协调，不突兀） */
-    margin: 20px 0 3px; /* 顶部间距20px（介绍与标题间距），底部6px（标题与说明文字间距） */
+    font-size: 26px;
+    margin: 20px 0 3px;
     color: #333;
 }
 
-/* 新增：年份分组标题样式 */
 .publications h3 {
     font-size: 22px;
     margin: 25px 0 10px;
     color: #555;
-    border-left: 4px solid #e53935; /* 红色左侧线区分年份 */
+    border-left: 4px solid #e53935;
     padding-left: 10px;
 }
 
 .publications p {
     margin-top: 0;
-    margin-bottom: 10px; /* 说明文字底部间距从12px→10px（缩小与论文列表的空白） */
+    margin-bottom: 10px;
     font-size: 16px;
 }
 
 .publication-list {
-    list-style: none; /* 清除默认列表样式 */
+    list-style: none;
 }
 
 .publication-list li {
     position: relative;
-    padding-left: 20px; /* 给灰色竖线留空间 */
-    margin-bottom: 16px; /* 论文之间间距从20px→18px（最小化） */
+    padding-left: 20px;
+    margin-bottom: 16px;
 }
 
-/* 左侧灰色竖线（核心样式） */
 .publication-list li::before {
     content: "";
     position: absolute;
@@ -160,17 +157,16 @@ body {
     top: 0;
     bottom: 0;
     width: 4px;
-    background-color: #999; /* 灰色，可根据喜好调整深浅 */
+    background-color: #999;
 }
 
 .paper-title {
     font-weight: bold;
     font-size: 18px;
     display: block;
-    margin-bottom: 3px; /* 论文标题与作者间距最小化 */
+    margin-bottom: 3px;
 }
 
-/* 新增：论文链接hover效果 */
 .paper-title a {
     color: #007bff;
     text-decoration: none;
@@ -182,99 +178,35 @@ body {
 
 .paper-authors {
     font-size: 16px;
-    margin-bottom: 0; /* 作者与期刊无间距 */
+    margin-bottom: 0;
 }
 
 .paper-venue {
     font-style: italic;
     font-size: 16px;
-    margin-top: 0; /* 期刊与作者无间距 */
-    color: #666; /* 期刊浅灰色，突出层级 */
+    margin-top: 0;
+    color: #666;
 }
 
 /* 页面底部样式 */
 footer {
-    margin-top: 40px; /* 与上方内容保持间距 */
+    margin-top: 40px;
     padding: 20px 0;
 }
 
 .footer-line {
-    border-top: 1px solid #eee; /* 横线样式，颜色与页面分隔线一致 */
+    border-top: 1px solid #eee;
     margin-bottom: 10px;
 }
 
 footer p {
-    text-align: right; /* 文字右对齐 */
+    text-align: right;
     font-size: 14px;
-    color: #666; /* 浅灰色，与页面次要文字风格一致 */
-    margin-right: 20px; /* 控制右间距实现左移 */
+    color: #666;
+    margin-right: 20px;
 }
 
-/* 响应式适配：小屏幕（手机/平板）布局优化 */
-@media (max-width: 1200px) {
-    .container {
-        padding: 20px 20px; /* 小屏幕缩小左右内边距 */
-        gap: 30px; /* 小屏幕缩小栏间距 */
-    }
-    .header-container {
-        padding: 0 20px; /* 导航栏容器同步缩间距 */
-    }
-    .top-nav {
-        padding: 12px 0; /* 导航栏内边距保持不变 */
-    }
-    /* 移除无效的left属性（原fixed定位的残留） */
-}
-
-/* 额外适配超小屏幕（手机竖屏）：避免左侧栏遮挡 */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* 上下排列 */
-        padding: 20px 15px;
-        gap: 20px; /* 竖屏时上下栏间距 */
-    }
-    .header-container {
-        padding: 0 15px;
-    }
-    .left-column {
-        width: 100%;
-        margin-right: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* 左侧内容居中 */
-    }
-    .right-column {
-        margin-left: 0;
-        margin-top: 0; /* 由container的gap控制间距，此处重置 */
-    }
-    /* 移动端头像适配 */
-    .avatar img {
-        width: 180px; /* 移动端缩小头像 */
-        height: 180px; /* 宽高一致，避免圆形变形 */
-    }
-}
-
-/* 专业服务板块样式 */
-.professional-services {
-  margin-top: 40px; /* 与上方内容保持间距 */
-}
-
-.professional-services h2 {
-  font-size: 26px; /* 与 Publications 标题字号一致 */
-  margin: 20px 0 10px; /* 标题上下间距 */
-  color: #333;
-}
-
-.professional-services ul {
-  list-style: disc; /* 项目符号样式，与现有列表一致 */
-  margin-left: 20px;
-}
-
-.professional-services li {
-  margin-bottom: 8px; /* 列表项间距 */
-  font-size: 18px; /* 与正文文字大小一致 */
-}
-
-/* 滚动条优化（新增） */
+/* 全局滚动条样式 */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -288,4 +220,107 @@ footer p {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #777;
+}
+
+/* 专业服务板块样式 */
+.professional-services {
+  margin-top: 40px;
+}
+
+.professional-services h2 {
+  font-size: 26px;
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+.professional-services ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.professional-services li {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+/* ====================== News 滚动模块样式 ====================== */
+.news-section {
+    margin: 24px 0;
+}
+
+.news-section h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* 滚动容器：限制高度 + 开启垂直滚动 */
+.news-scroll-wrap {
+    max-height: 180px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list li {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 6px 0;
+}
+
+.news-date {
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+.news-list a {
+    color: #007bff;
+    text-decoration: none;
+}
+.news-list a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式适配：大屏 */
+@media (max-width: 1200px) {
+    .container {
+        padding: 20px 20px;
+        gap: 30px;
+    }
+    .header-container {
+        padding: 0 20px;
+    }
+    .top-nav {
+        padding: 12px 0;
+    }
+}
+
+/* 响应式适配：手机竖屏 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 20px;
+    }
+    .header-container {
+        padding: 0 15px;
+    }
+    .left-column {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .right-column {
+        margin-left: 0;
+    }
+    .avatar img {
+        width: 180px;
+        height: 180px;
+    }
 }
