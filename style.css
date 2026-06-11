@@ -243,7 +243,7 @@ footer p {
   font-size: 18px;
 }
 
-/* ====================== News 滚动模块样式 ====================== */
+/* ====================== News 滚动模块样式（关键修改：滚动时才显示滚动条） ====================== */
 .news-section {
     margin: 24px 0;
 }
@@ -254,11 +254,45 @@ footer p {
     color: #333;
 }
 
-/* 滚动容器：限制高度 + 开启垂直滚动 */
+/* 滚动容器：限制高度 + 开启垂直滚动 + 预留滚动条空间 */
 .news-scroll-wrap {
     max-height: 180px;
     overflow-y: auto;
     padding-right: 8px;
+
+    /* 关键：让滚动条默认透明，只有滚动时才显示 */
+    scrollbar-width: thin; /* Firefox 兼容 */
+    scrollbar-color: transparent transparent;
+    transition: scrollbar-color 0.3s ease;
+}
+
+/* 鼠标悬浮/滚动时，滚动条显示 */
+.news-scroll-wrap:hover,
+.news-scroll-wrap:active,
+.news-scroll-wrap:focus {
+    scrollbar-color: #c1c1c1 transparent;
+}
+
+/* 自定义 Webkit 滚动条（Chrome/Safari/Edge） */
+.news-scroll-wrap::-webkit-scrollbar {
+    width: 6px; /* 更细的滚动条，和截图效果一致 */
+}
+
+.news-scroll-wrap::-webkit-scrollbar-track {
+    background: transparent; /* 轨道透明 */
+}
+
+.news-scroll-wrap::-webkit-scrollbar-thumb {
+    background-color: transparent; /* 默认隐藏 */
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+/* 鼠标悬浮/滚动时，滑块显示 */
+.news-scroll-wrap:hover::-webkit-scrollbar-thumb,
+.news-scroll-wrap:active::-webkit-scrollbar-thumb,
+.news-scroll-wrap:focus::-webkit-scrollbar-thumb {
+    background-color: #999; /* 灰色滑块，和截图效果一致 */
 }
 
 .news-list {
