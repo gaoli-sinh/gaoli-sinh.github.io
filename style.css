@@ -301,10 +301,20 @@ footer p {
     margin: 0;
 }
 
+/* 改动1：增加弹性布局，让旗子和文字垂直居中 */
 .news-list li {
     font-size: 18px;
     line-height: 1.6;
     margin: 6px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* 改动2：新增 红色小旗子样式 */
+.news-flag {
+    color: #e53935;
+    margin-right: 8px;
+    font-size: 15px;
 }
 
 .news-date {
