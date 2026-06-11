@@ -23,7 +23,7 @@
     </div>
 
     <div class="container">
-        <!-- 左侧：头像（红框2） + 信息卡片（红框4） -->
+        <!-- 左侧：头像 + 信息卡片 -->
         <div class="left-column">
             <!-- 头像区域 -->
             <div class="avatar">
@@ -39,17 +39,45 @@
             </div>
         </div>
 
-        <!-- 右侧：主介绍 -->
+        <!-- 右侧：主内容区 -->
         <div class="right-column">
             <div class="intro">
                 <p> I am currently a Senior R&D Engineer at <a href="https://searchscience.baidu.com/" target="_blank" rel="noopener noreferrer">Baidu Search</a>, enhancing the search experience based on large and small language models since 2020. Prior to that, I served as an Applied Researcher specializing in recommendation systems at Tencent from 2018 to 2020. I earned my Ph.D. in 2018 from the <a href="https://www.iie.ac.cn/" target="_blank" rel="noopener noreferrer">Institute of Information Engineering, Chinese Academy of Sciences</a> (IIE, CAS), under the supervision of Prof. Yue Hu. My research interests focus on applied large language models (LLMs), search engines, and recommendation systems. </p>
                 <p><strong>Currently, our team is actively recruiting highly self-motivated research interns and full-time researchers/engineers. If you are interested in joining us, please send your CV to gaoli05 [at] baidu.com.</strong></p>
             </div>
 
-            <!-- 保留最近的Publications（仅展示最新） -->
+            <!-- 可滚动 News 模块 -->
+            <div class="news-section">
+                <h2>News</h2>
+                <div class="news-scroll-wrap">
+                    <ul class="news-list">
+                        <li>
+                            <span class="news-date">[2025/09]</span>
+                            Accepted to serve as SPC member for <a href="#">WWW 2026</a>.
+                        </li>
+                        <li>
+                            <span class="news-date">[2024/05]</span>
+                            Two papers were accepted to <a href="#">ICML 2024</a>.
+                        </li>
+                        <li>
+                            <span class="news-date">[2024/02]</span>
+                            One paper about Graph Heterophily Modeling was accepted to <a href="#">WWWJ</a>.
+                        </li>
+                        <li>
+                            <span class="news-date">[2023/10]</span>
+                            Accepted to serve as PC member for <a href="#">WWW 2024</a>.
+                        </li>
+                        <li>
+                            <span class="news-date">[2023/07]</span>
+                            Accepted to serve as PC member for <a href="#">AAAI 2024</a>.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 最近论文板块 -->
             <div class="publications">
                 <h2>Recent Publications</h2>
-                <!-- 修复：闭合p标签 -->
                 <p>(*) denotes the corresponding author.</p>
                 <ul class="publication-list">
                    <li>
@@ -67,7 +95,7 @@
                       <p class="paper-authors">Tingyu Chen, Wenkai Zhang, <strong>Li Gao<sup>*</sup></strong>, Lixin Su, Ge Chen, Dawei Yin, Daiting Shi.</p>
                       <p class="paper-venue">In SIGIR 2026 (Industry Track), Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval.</p>
                    </li>
-                  <li>
+                   <li>
                       <span class="paper-title">COOPER: A Unified Model for Cooperative Perception and Reasoning in Spatial Intelligence. <a href="https://arxiv.org/pdf/2512.04563" target="_blank" rel="noopener noreferrer">[PDF]</a> </span>
                       <p class="paper-authors">Zefeng Zhang, Xiangzhao Hao, Hengzhu Tang, Zhenyu Zhang, Jiawei Sheng, Xiaodong Li, Zhenyang Li, <strong>Li Gao</strong>, Daiting Shi, Dawei Yin, Tingwen Liu.</p>
                       <p class="paper-venue">In CVPR 2026 (Findings), Proceedings of the Computer Vision and Pattern Recognition Conference.</p>
@@ -98,7 +126,6 @@
                       <p class="paper-venue">In KDD 2025, Research Track, Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining.</p>
                    </li>
                 </ul>
-                <!-- 修复：将游离文本包裹在p标签里 -->
                 <p>See all my publications <a href="publications.html">here</a>.</p>
             </div>
 
@@ -110,6 +137,7 @@
             </div>
         </div>
     </div>
+
     <!-- 页面底部区域 -->
     <footer>
       <div class="footer-line"></div>
