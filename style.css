@@ -243,7 +243,7 @@ footer p {
   font-size: 18px;
 }
 
-/* ====================== News 滚动模块样式（关键修改：滚动时才显示滚动条） ====================== */
+/* ====================== News 滚动模块样式（修复粘连核心） ====================== */
 .news-section {
     margin: 24px 0;
 }
@@ -301,30 +301,35 @@ footer p {
     margin: 0;
 }
 
-/* 改动1：增加弹性布局，让旗子和文字垂直居中 */
+/* Flex 布局保留垂直居中，增加元素间距 */
 .news-list li {
     font-size: 18px;
     line-height: 1.6;
     margin: 6px 0;
     display: flex;
     align-items: center;
+    gap: 6px; /* 统一 flex 子元素间距，替代原生空格 */
 }
 
-/* 改动2：新增 红色小旗子样式 */
+/* 红色小旗子样式 */
 .news-flag {
     color: #e53935;
-    margin-right: 8px;
     font-size: 15px;
+    /* 清除原有 margin，统一由 gap 控制 */
+    margin-right: 0;
 }
 
 .news-date {
     font-weight: 600;
-    margin-right: 6px;
+    /* 清除原有 margin，统一由 gap 控制 */
+    margin-right: 0;
 }
 
+/* 给链接强制左侧间距，彻底解决文字和链接粘连 */
 .news-list a {
     color: #007bff;
     text-decoration: none;
+    margin-left: 4px;
 }
 .news-list a:hover {
     text-decoration: underline;
